@@ -97,8 +97,57 @@ ul {
 /* === Seccion 7: Galeria - ROUS MEDINA | .seccion--galeria, .galeria__grid, .galeria__item (Grid) === */
 
 /* === Seccion 8: Audio - WILMER GULCOCHIA | .seccion--multimedia, .multimedia__audio === */
+.seccion--multimedia {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    margin-top: 2rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.multimedia__audio {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.multimedia__audio h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.4rem;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.multimedia__audio audio {
+    width: 100%;
+    max-width: 500px;
+}
+
+.multimedia__descripcion {
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
 
 /* === Seccion 9: Video - WILMER GULCOCHIA | .multimedia__video === */
+.multimedia__video {
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+.multimedia__video h3 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.4rem;
+    color: var(--color-primario);
+    margin-bottom: 1rem;
+}
+
+.multimedia__video video,
+.multimedia__video iframe {
+    width: 100%;
+    max-width: 700px;
+    border-radius: var(--radio-borde);
+    box-shadow: var(--sombra-media);
+}
 
 /* === Seccion 10: Recursos - DANIEL | .seccion--recursos, .recursos__grid, .recurso (Flexbox) === */
 
