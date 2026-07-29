@@ -230,6 +230,72 @@ Asi no se repite codigo. Todas las secciones heredan la base y solo agregan lo p
 
 ---
 
+## Unidades de medida CSS
+
+En este proyecto usamos principalmente `rem` y `px`. Aqui la diferencia entre las unidades mas frecuentes:
+
+### Unidades absolutas
+
+| Unidad | Que es | Uso comun |
+|--------|--------|-----------|
+| `px` | Pixel fijo, no cambia | Bordes, sombras, valores pequenios y precisos |
+
+### Unidades relativas
+
+| Unidad | Relativa a... | Uso comun |
+|--------|---------------|-----------|
+| `rem` | Tamano de fuente del `<html>` (16px por defecto) | Padding, margin, font-size, espaciado general |
+| `em` | Tamano de fuente del elemento padre | Espaciado interno que escale con el texto del padre |
+| `%` | Tamano del elemento padre | Anchos, alturas, layouts fluidos |
+| `vw` | 1% del ancho de la ventana | Elementos que ocupen un porcentaje del viewport |
+| `vh` | 1% del alto de la ventana | Secciones de pantalla completa (hero, modales) |
+
+### Conversion rapida (base 16px)
+
+```
+1rem    = 16px
+0.5rem  = 8px
+0.75rem = 12px
+1.5rem  = 24px
+2rem    = 32px
+3rem    = 48px
+4rem    = 64px
+```
+
+### Por que usamos rem en este proyecto?
+
+```css
+/* Con rem: si el usuario cambia el tamano de fuente en su navegador,
+   todo el diseno se adapta proporcionalmente */
+padding: 2rem;        /* 32px que se adapta */
+font-size: 1.5rem;   /* 24px que se adapta */
+
+/* Con px: valor fijo, no se adapta a preferencias del usuario */
+border: 1px solid;   /* bordes finos siempre igual */
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);  /* sombras precisas */
+```
+
+### Cuando usar cada una
+
+| Situacion | Usar | Ejemplo |
+|-----------|------|---------|
+| Padding, margin, espaciado | `rem` | `padding: 2rem;` |
+| Font-size | `rem` | `font-size: 1.2rem;` |
+| Bordes | `px` | `border: 1px solid;` |
+| Sombras | `px` | `box-shadow: 0 4px 16px...` |
+| Border-radius | `px` | `border-radius: 8px;` |
+| Anchos fluidos | `%` | `width: 100%;` |
+| Max-width de contenedores | `px` | `max-width: 1200px;` |
+| Altura completa de pantalla | `vh` | `min-height: 100vh;` |
+
+### Regla simple
+
+- **rem** → para todo lo que deba escalar con las preferencias del usuario (texto, espaciado)
+- **px** → para valores pequenios y precisos que no necesitan escalar (bordes, sombras, border-radius)
+- **%** → para que un elemento ocupe un porcentaje de su padre
+
+---
+
 ## Uso de variables CSS
 
 Todos deben usar las variables definidas en `:root`. No usar colores directos.
