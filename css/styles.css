@@ -1,0 +1,147 @@
+/* ============================================================
+   CAPSULA DEL TIEMPO DIGITAL
+
+   IMPORTANTE: Usar siempre las variables de :root para colores,
+   fuentes y sombras. No usar valores directos (#hex, rgb).
+   Esto garantiza uniformidad visual en todo el proyecto.
+   ============================================================ */
+
+/* === VARIABLES CSS === */
+:root {
+    --color-primario: #2C3E50;
+    --color-secundario: #E74C3C;
+    --color-acento: #F39C12;
+    --color-claro: #ECF0F1;
+    --color-oscuro: #1A252F;
+
+    --fuente-titulo: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Inter', sans-serif;
+
+    --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 4px 16px rgba(0, 0, 0, 0.15);
+    --sombra-fuerte: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+    --radio-borde: 8px;
+    --transicion: all 0.3s ease;
+    --max-ancho: 1200px;
+}
+
+/* === RESET Y BASE === */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-oscuro);
+    background-color: var(--color-claro);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--color-secundario);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+a:hover {
+    color: var(--color-acento);
+}
+
+ul {
+    list-style: none;
+}
+
+/* === UTILIDADES COMUNES === */
+.seccion {
+    padding: 4rem 2rem;
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+}
+
+.seccion__titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 2.2rem;
+    color: var(--color-primario);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* === Seccion 1: Header - MIRIAN | .hero === */
+
+/* === Seccion 2: Navegacion - MIRIAN | .navegacion, .navegacion__lista (Flexbox, sticky) === */
+
+/* === Seccion 3: Quien soy - MIRIAN | .seccion--quien-soy, .quien-soy__contenido, .quien-soy__datos (Flexbox) === */
+
+/* === Seccion 4: Mis intereses - JAVIER | .seccion--intereses, .intereses__grid, .tarjeta-interes (Flexbox) === */
+
+/* === Seccion 5: Mis metas - JAVIER | .seccion--metas, .metas__tabla-contenedor, .metas__tabla === */
+
+/* === Seccion 6: Habilidades - ROUS MEDINA | .seccion--habilidades, .habilidades__grid, .tarjeta-habilidad (Flexbox) === */
+
+/* === Seccion 7: Galeria - ROUS MEDINA | .seccion--galeria, .galeria__grid, .galeria__item (Grid) === */
+
+/* === Seccion 8: Audio - WILMER GULCOCHIA | .seccion--multimedia, .multimedia__audio === */
+
+/* === Seccion 9: Video - WILMER GULCOCHIA | .multimedia__video === */
+
+/* === Seccion 10: Recursos - DANIEL | .seccion--recursos, .recursos__grid, .recurso (Flexbox) === */
+
+/* === Seccion 11: Carta al futuro - DANIEL | .seccion--carta, .carta__papel === */
+
+/* === Seccion 12: Footer - DANIEL | .footer, .footer__contenido, .footer__lista (Flexbox) === */
+
+/* === RESPONSIVE === */
+
+/* --- Tablet (max 768px) --- */
+@media (max-width: 768px) {
+    .seccion {
+        padding: 3rem 1.5rem;
+    }
+
+    .seccion__titulo {
+        font-size: 1.8rem;
+    }
+
+    /* Secciones 1-3: MIRIAN */
+
+    /* Secciones 4-5: JAVIER */
+
+    /* Secciones 6-7: ROUS MEDINA */
+
+    /* Secciones 8-9: WILMER GULCOCHIA */
+
+    /* Secciones 10-12: DANIEL */
+}
+
+/* --- Mobile (max 480px) --- */
+@media (max-width: 480px) {
+    .seccion {
+        padding: 2rem 1rem;
+    }
+
+    /* Secciones 1-3: MIRIAN */
+
+    /* Secciones 4-5: JAVIER */
+
+    /* Secciones 6-7: ROUS MEDINA */
+
+    /* Secciones 8-9: WILMER GULCOCHIA */
+
+    /* Secciones 10-12: DANIEL */
+}
