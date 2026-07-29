@@ -159,6 +159,77 @@ Revisar juntos que todo se vea bien y hacer ajustes finales.
 
 ---
 
+## Nomenclatura BEM para nombres de clases
+
+En este proyecto usamos la convencion **BEM** (Bloque, Elemento, Modificador) para nombrar las clases CSS. Esto mantiene el codigo organizado y evita conflictos de estilos entre secciones.
+
+### Estructura
+
+```
+.bloque                → Componente independiente
+.bloque__elemento      → Parte interna del bloque
+.bloque--modificador   → Variante visual del bloque
+```
+
+### Ejemplo con la seccion multimedia
+
+```css
+.seccion                → Bloque base (general, se reutiliza en todas las secciones)
+.seccion--multimedia    → Modificador (estilos unicos de esta seccion)
+.multimedia__audio      → Elemento (el bloque de audio dentro de multimedia)
+.multimedia__video      → Elemento (el bloque de video dentro de multimedia)
+```
+
+### En el HTML se ve asi
+
+```html
+<section class="seccion seccion--multimedia" id="multimedia">
+    <article class="multimedia__audio">
+        <h3>Mi audio</h3>
+        <audio controls>...</audio>
+    </article>
+    <article class="multimedia__video">
+        <h3>Mi video</h3>
+        <video controls>...</video>
+    </article>
+</section>
+```
+
+### Reglas basicas
+
+| Separador | Significado | Ejemplo |
+|-----------|-------------|---------|
+| `__` (doble guion bajo) | Elemento hijo del bloque | `.navegacion__lista` |
+| `--` (doble guion) | Variante/modificador del bloque | `.seccion--galeria` |
+| `-` (guion simple) | Separador de palabras | `.tarjeta-interes` |
+
+### Por que dos clases en un section?
+
+```html
+<section class="seccion seccion--intereses">
+```
+
+- `.seccion` → Da los estilos BASE compartidos (padding, max-width, centrado)
+- `.seccion--intereses` → Agrega los estilos UNICOS de esa seccion (fondo, sombra, etc.)
+
+Asi no se repite codigo. Todas las secciones heredan la base y solo agregan lo particular.
+
+### Ejemplos por seccion
+
+| Seccion | Bloque | Elementos | Modificador |
+|---------|--------|-----------|-------------|
+| Navegacion | `.navegacion` | `__lista`, `__enlace` | — |
+| Intereses | `.tarjeta-interes` | `__imagen`, `__titulo`, `__descripcion` | — |
+| Metas | `.metas` | `__tabla-contenedor`, `__tabla` | `.seccion--metas` |
+| Habilidades | `.tarjeta-habilidad` | `__icono`, `__titulo`, `__nivel` | — |
+| Galeria | `.galeria` | `__grid`, `__item` | `.seccion--galeria` |
+| Multimedia | `.multimedia` | `__audio`, `__video`, `__descripcion` | `.seccion--multimedia` |
+| Recursos | `.recurso` | `__titulo`, `__descripcion` | `.seccion--recursos` |
+| Carta | `.carta` | `__papel`, `__fecha`, `__saludo` | `.seccion--carta` |
+| Footer | `.footer` | `__contenido`, `__lista`, `__copyright` | — |
+
+---
+
 ## Uso de variables CSS
 
 Todos deben usar las variables definidas en `:root`. No usar colores directos.
