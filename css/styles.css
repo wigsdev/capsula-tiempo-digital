@@ -8,180 +8,272 @@
 
 /* === VARIABLES CSS === */
 :root {
-    --color-primario: #2C3E50;
-    --color-secundario: #E74C3C;
-    --color-acento: #F39C12;
-    --color-claro: #ECF0F1;
-    --color-oscuro: #1A252F;
+  --color-primario: #2c3e50;
+  --color-secundario: #e74c3c;
+  --color-acento: #f39c12;
+  --color-claro: #ecf0f1;
+  --color-oscuro: #1a252f;
 
-    --fuente-titulo: 'Playfair Display', serif;
-    --fuente-cuerpo: 'Inter', sans-serif;
+  --fuente-titulo: "Playfair Display", serif;
+  --fuente-cuerpo: "Inter", sans-serif;
 
-    --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.1);
-    --sombra-media: 0 4px 16px rgba(0, 0, 0, 0.15);
-    --sombra-fuerte: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --sombra-media: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --sombra-fuerte: 0 8px 32px rgba(0, 0, 0, 0.2);
 
-    --radio-borde: 8px;
-    --transicion: all 0.3s ease;
-    --max-ancho: 1200px;
+  --radio-borde: 8px;
+  --transicion: all 0.3s ease;
+  --max-ancho: 1200px;
 }
 
 /* === RESET Y BASE === */
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    font-family: var(--fuente-cuerpo);
-    font-size: 16px;
-    line-height: 1.6;
-    color: var(--color-oscuro);
-    background-color: var(--color-claro);
+  font-family: var(--fuente-cuerpo);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-oscuro);
+  background-color: var(--color-claro);
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
-    color: var(--color-secundario);
-    text-decoration: none;
-    transition: var(--transicion);
+  color: var(--color-secundario);
+  text-decoration: none;
+  transition: var(--transicion);
 }
 
 a:hover {
-    color: var(--color-secundario);
+  color: var(--color-secundario);
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 /* === UTILIDADES COMUNES === */
 .seccion {
-    padding: 4rem 2rem;
-    max-width: var(--max-ancho);
-    margin: 0 auto;
+  padding: 4rem 2rem;
+  max-width: var(--max-ancho);
+  margin: 0 auto;
 }
 
 .seccion__titulo {
-    font-family: var(--fuente-titulo);
-    font-size: 2.2rem;
-    color: var(--color-primario);
-    text-align: center;
-    margin-bottom: 2rem;
+  font-family: var(--fuente-titulo);
+  font-size: 2.2rem;
+  color: var(--color-primario);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 /* === Seccion 1: Header - MIRIAN | .hero === */
-.hero{
-    min-height: 90vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 60px 10%;
-    background: linear-gradient(135deg, var(--color-oscuro), var(--color-primario));
-    color: white;
-}  
-.hero-contenido{
-    flex: 1;
-} 
-.hero-contenido h1{
-    font-size: 2rem;
-    margin-bottom: 20x;
+.hero {
+  min-height: 90vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  background: linear-gradient(
+    135deg,
+    var(--color-oscuro),
+    var(--color-primario)
+  );
+  color: white;
 }
-.hero-contenido p{
-    font-size: 1.2rem;
-    margin-bottom: 60px;
-    text-align: justify;
-    max-width: 350px;
+.hero-contenido {
+  flex: 1;
 }
-.btn{
-    text-decoration: none;
-    background: white;
-    color: var(--color-oscuro);
-    padding: 10px 20px;
-    border-radius: 15px;
-    font-weight: bold;
-    transition: .4s;
+.hero-contenido h1 {
+  font-size: 2rem;
+  margin-bottom: 20x;
 }
-.btn:hover{
-    color: var(--color-secundario);
+.hero-contenido p {
+  font-size: 1.2rem;
+  margin-bottom: 60px;
+  text-align: justify;
+  max-width: 350px;
 }
-.hero-imagen{
-    flex: 1;
-    text-align: center;
-    padding: 30px;
+.btn {
+  text-decoration: none;
+  background: white;
+  color: var(--color-oscuro);
+  padding: 10px 20px;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: 0.4s;
 }
-.hero-imagen img{
-    width: 340px;
-    height: 340px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 8px solid white;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+.btn:hover {
+  color: var(--color-secundario);
 }
-.hero-imagen figcaption{
-    padding: 15px;
+.hero-imagen {
+  flex: 1;
+  text-align: center;
+  padding: 30px;
+}
+.hero-imagen img {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+.hero-imagen figcaption {
+  padding: 15px;
 }
 
 /* === Seccion 2: Navegacion - MIRIAN | .navegacion, .navegacion__lista (Flexbox, sticky) === */
-nav{
-    background: #ECF0F1;
-    position: sticky;
-    top: 0;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    z-index: 500;
+nav {
+  background: #ecf0f1;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  z-index: 500;
 }
-.menu{
-    display: flex;
-    justify-content: center;
-    list-style: none;
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
-.menu a{
-    display: block;
-    padding: 20px 25px;
-    text-decoration: none;
-    color: var(--color-oscuro);
-    font-weight: 600;
-    transition: .3s;
+.menu a {
+  display: block;
+  padding: 20px 25px;
+  text-decoration: none;
+  color: var(--color-oscuro);
+  font-weight: 600;
+  transition: 0.3s;
 }
-.menu a:hover{
-    background: var(--color-secundario);
-    color: white;
-    border-radius: 15px;
+.menu a:hover {
+  background: var(--color-secundario);
+  color: white;
+  border-radius: 15px;
 }
 /* === Seccion 3: Quien soy - MIRIAN | .seccion--quien-soy, .quien-soy__contenido, .quien-soy__datos (Flexbox) === */
-.seccion-quien-soy{
-    max-width: 1000px;
-    margin: 90px auto;
-    padding: 40px;
-    background: var(--color-claro);
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+.seccion-quien-soy {
+  max-width: 1000px;
+  margin: 90px auto;
+  padding: 40px;
+  background: var(--color-claro);
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-.seccion-quien-soy h2{
-    color: var(--color-oscuro);
-    margin-bottom: 20px;
-    font-size: 2rem;
+.seccion-quien-soy h2 {
+  color: var(--color-oscuro);
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
-.seccion-quien-soy p{
-    line-height: 1.8;
-    margin-bottom: 15px;
-    text-align: justify;
+.seccion-quien-soy p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
 }
 /* === Seccion 4: Mis intereses - JAVIER | .seccion--intereses, .intereses__grid, .tarjeta-interes (Flexbox) === */
 
+.seccion--intereses {
+  padding: 4rem 2rem;
+  max-width: var(--max-ancho);
+  margin: 0 auto;
+}
+
+.seccion--intereses h2 {
+  font-family: var(--fuente-titulo);
+  font-size: 2.2rem;
+  color: var(--color-primario);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.intereses__grid {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las tarjetas bajen a la siguiente línea si no hay espacio */
+  gap: 2rem;
+  justify-content: center;
+}
+
+.tarjeta-interes {
+  background: white;
+  /* Calcula el ancho para tener 3 columnas, restando el gap */
+  flex: 1 1 calc(33.333% - 2rem);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-suave);
+  transition: var(--transicion);
+  text-align: center;
+}
+
+.tarjeta-interes:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--sombra-media);
+}
+
+.tarjeta-interes h3 {
+  color: var(--color-acento);
+  font-family: var(--fuente-titulo);
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
 /* === Seccion 5: Mis metas - JAVIER | .seccion--metas, .metas__tabla-contenedor, .metas__tabla === */
+.seccion--metas {
+  padding: 4rem 2rem;
+  max-width: var(--max-ancho);
+  margin: 0 auto;
+  /* overflow-x permite hacer scroll horizontal si la tabla es muy grande en móviles */
+  overflow-x: auto;
+}
+
+.seccion--metas h2 {
+  font-family: var(--fuente-titulo);
+  font-size: 2.2rem;
+  color: var(--color-primario);
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.seccion--metas table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: var(--radio-borde);
+  /* overflow: hidden asegura que los bordes redondeados se apliquen al thead */
+  overflow: hidden;
+  box-shadow: var(--sombra-suave);
+}
+
+.seccion--metas thead {
+  background-color: var(--color-primario);
+  color: white;
+}
+
+.seccion--metas th,
+.seccion--metas td {
+  padding: 1.2rem 1.5rem;
+  text-align: left;
+}
+
+.seccion--metas tbody tr {
+  border-bottom: 1px solid var(--color-claro);
+  transition: var(--transicion);
+}
+
+.seccion--metas tbody tr:hover {
+  background-color: var(--color-claro);
+}
 
 /* === Seccion 6: Habilidades - ROUS MEDINA | .seccion--habilidades, .habilidades__grid, .tarjeta-habilidad (Flexbox) === */
 
@@ -189,55 +281,55 @@ nav{
 
 /* === Seccion 8: Audio - WILMER GULCOCHIA | .seccion--multimedia, .multimedia__audio === */
 .seccion--multimedia {
-    background-color: white;
-    border-radius: var(--radio-borde);
-    margin-top: 2rem;
-    box-shadow: var(--sombra-suave);
+  background-color: white;
+  border-radius: var(--radio-borde);
+  margin-top: 2rem;
+  box-shadow: var(--sombra-suave);
 }
 
 .multimedia__audio {
-    margin-bottom: 2.5rem;
-    text-align: center;
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .multimedia__audio h3 {
-    font-family: var(--fuente-titulo);
-    font-size: 1.4rem;
-    color: var(--color-primario);
-    margin-bottom: 1rem;
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  color: var(--color-primario);
+  margin-bottom: 1rem;
 }
 
 .multimedia__audio audio {
-    width: 100%;
-    max-width: 500px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .multimedia__descripcion {
-    margin-bottom: 0.8rem;
-    font-size: 0.9rem;
-    color: #666;
-    font-style: italic;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
 }
 
 /* === Seccion 9: Video - WILMER GULCOCHIA | .multimedia__video === */
 .multimedia__video {
-    margin-bottom: 2.5rem;
-    text-align: center;
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .multimedia__video h3 {
-    font-family: var(--fuente-titulo);
-    font-size: 1.4rem;
-    color: var(--color-primario);
-    margin-bottom: 1rem;
+  font-family: var(--fuente-titulo);
+  font-size: 1.4rem;
+  color: var(--color-primario);
+  margin-bottom: 1rem;
 }
 
 .multimedia__video video,
 .multimedia__video iframe {
-    width: 100%;
-    max-width: 700px;
-    border-radius: var(--radio-borde);
-    box-shadow: var(--sombra-media);
+  width: 100%;
+  max-width: 700px;
+  border-radius: var(--radio-borde);
+  box-shadow: var(--sombra-media);
 }
 
 /* === Seccion 10: Recursos - DANIEL | .seccion--recursos, .recursos__grid, .recurso (Flexbox) === */
@@ -413,22 +505,27 @@ nav{
 
 /* --- Tablet (max 768px) --- */
 @media (max-width: 768px) {
-    .seccion {
-        padding: 3rem 1.5rem;
-    }
+  .seccion {
+    padding: 3rem 1.5rem;
+  }
 
-    .seccion__titulo {
-        font-size: 1.8rem;
-    }
+  .seccion__titulo {
+    font-size: 1.8rem;
+  }
 
-    /* Secciones 1-3: MIRIAN */
+  /* Secciones 1-3: MIRIAN */
 
-    /* Secciones 4-5: JAVIER */
+  /* Secciones 4-5: JAVIER */
+  .tarjeta-interes {
+    /* Pasa a tener 2 columnas en lugar de 3 */
+    flex: 1 1 calc(50% - 2rem);
+  }
 
-    /* Secciones 6-7: ROUS MEDINA */
+  /* Secciones 6-7: ROUS MEDINA */
 
-    /* Secciones 8-9: WILMER GULCOCHIA */
+  /* Secciones 8-9: WILMER GULCOCHIA */
 
+  /* Secciones 10-12: DANIEL */
     /* Secciones 10-12: DANIEL */
     .recurso {
         flex: 1 1 45%;
@@ -445,18 +542,29 @@ nav{
 
 /* --- Mobile (max 480px) --- */
 @media (max-width: 480px) {
-    .seccion {
-        padding: 2rem 1rem;
-    }
+  .seccion {
+    padding: 2rem 1rem;
+  }
 
-    /* Secciones 1-3: MIRIAN */
+  /* Secciones 1-3: MIRIAN */
 
-    /* Secciones 4-5: JAVIER */
+  /* Secciones 4-5: JAVIER */
+  .tarjeta-interes {
+    /* Pasa a tener 1 sola columna ocupando el 100% */
+    flex: 1 1 100%;
+  }
 
-    /* Secciones 6-7: ROUS MEDINA */
+  .seccion--metas th,
+  .seccion--metas td {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+  }
 
-    /* Secciones 8-9: WILMER GULCOCHIA */
+  /* Secciones 6-7: ROUS MEDINA */
 
+  /* Secciones 8-9: WILMER GULCOCHIA */
+
+  /* Secciones 10-12: DANIEL */
     /* Secciones 10-12: DANIEL */
     .recurso {
         flex: 1 1 100%;
