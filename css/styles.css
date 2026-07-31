@@ -333,10 +333,173 @@ nav {
 }
 
 /* === Seccion 10: Recursos - DANIEL | .seccion--recursos, .recursos__grid, .recurso (Flexbox) === */
+.seccion--recursos {
+    background-color: white;
+    border-radius: var(--radio-borde);
+    margin-top: 2rem;
+    box-shadow: var(--sombra-suave);
+}
+
+.recursos__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.recurso {
+    flex: 1 1 280px;
+    max-width: 340px;
+    background-color: var(--color-claro);
+    border-radius: var(--radio-borde);
+    padding: 1.5rem;
+    box-shadow: var(--sombra-suave);
+    display: flex;
+    flex-direction: column;
+    transition: var(--transicion);
+}
+
+.recurso:hover {
+    box-shadow: var(--sombra-media);
+    transform: translateY(-4px);
+}
+
+.recurso__titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.3rem;
+    color: var(--color-primario);
+    margin-bottom: 0.8rem;
+}
+
+.recurso__descripcion {
+    font-size: 0.95rem;
+    color: var(--color-oscuro);
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+
+.recurso__enlace {
+    align-self: flex-start;
+    font-weight: 600;
+    color: var(--color-secundario);
+}
+
+.recurso__enlace:hover {
+    color: var(--color-acento);
+}
 
 /* === Seccion 11: Carta al futuro - DANIEL | .seccion--carta, .carta__papel === */
+.seccion--carta {
+    margin-top: 2rem;
+}
+
+.carta__papel {
+    max-width: 750px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, white, var(--color-claro));
+    border-radius: var(--radio-borde);
+    padding: 3rem;
+    box-shadow: var(--sombra-media);
+    border-left: 4px solid var(--color-acento);
+}
+
+.carta__fecha {
+    text-align: right;
+    font-style: italic;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.carta__saludo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.4rem;
+    color: var(--color-primario);
+    margin-bottom: 1.2rem;
+}
+
+.carta__parrafo {
+    text-align: justify;
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+}
+
+.carta__firma {
+    font-family: var(--fuente-titulo);
+    font-size: 1.2rem;
+    text-align: right;
+    margin-top: 1.5rem;
+    color: var(--color-secundario);
+}
 
 /* === Seccion 12: Footer - DANIEL | .footer, .footer__contenido, .footer__lista (Flexbox) === */
+.footer {
+    background-color: var(--color-oscuro);
+    color: var(--color-claro);
+    padding: 3rem 2rem 1.5rem;
+    margin-top: 3rem;
+}
+
+.footer__contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: var(--max-ancho);
+    margin: 0 auto 2rem;
+}
+
+.footer__columna {
+    flex: 1 1 220px;
+}
+
+.footer__titulo {
+    font-family: var(--fuente-titulo);
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 0.8rem;
+}
+
+.footer__descripcion {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+.footer__lista {
+    flex: 1 1 220px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.5rem;
+}
+
+.footer__lista a {
+    color: var(--color-claro);
+    font-size: 0.9rem;
+}
+
+.footer__lista a:hover {
+    color: var(--color-acento);
+}
+
+.footer__contacto p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer__contacto a {
+    color: var(--color-claro);
+}
+
+.footer__contacto a:hover {
+    color: var(--color-acento);
+}
+
+.footer__copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
 
 /* === RESPONSIVE === */
 
@@ -363,6 +526,18 @@ nav {
   /* Secciones 8-9: WILMER GULCOCHIA */
 
   /* Secciones 10-12: DANIEL */
+    /* Secciones 10-12: DANIEL */
+    .recurso {
+        flex: 1 1 45%;
+    }
+
+    .carta__papel {
+        padding: 2rem;
+    }
+
+    .footer__contenido {
+        justify-content: flex-start;
+    }
 }
 
 /* --- Mobile (max 480px) --- */
@@ -390,4 +565,32 @@ nav {
   /* Secciones 8-9: WILMER GULCOCHIA */
 
   /* Secciones 10-12: DANIEL */
+    /* Secciones 10-12: DANIEL */
+    .recurso {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .carta__papel {
+        padding: 1.5rem;
+    }
+
+    .carta__fecha,
+    .carta__firma {
+        text-align: left;
+    }
+
+    .footer {
+        padding: 2rem 1.5rem 1rem;
+        text-align: center;
+    }
+
+    .footer__contenido {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer__lista {
+        justify-content: center;
+    }
 }
