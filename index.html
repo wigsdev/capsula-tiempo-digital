@@ -1,111 +1,247 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capsula del Tiempo Digital</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <!-- Seccion 1: Header - MIRIAN | id="inicio" | clase: hero -->
-     <!--Header-->
-     <header class="hero" id="inicio">
-        <section class="hero-contenido">
-            <h1>Cápsula del Tiempo</h1>
-            <p>
-                Pequeño espacio donde guardo quién soy hoy y para descubrir
-                quién seré en el futuro.
-            </p>
-            <a href="#quien-soy" class="btn">
-                Conóceme
-            </a>
-        </section>
+    <!--Header-->
+    <header class="hero" id="inicio">
+      <section class="hero-contenido">
+        <h1>Cápsula del Tiempo</h1>
+        <p>
+          Pequeño espacio donde guardo quién soy hoy y para descubrir quién seré
+          en el futuro.
+        </p>
+        <a href="#quien-soy" class="btn"> Conóceme </a>
+      </section>
 
-        <figure class="hero-imagen">
-            <img src="img/perfil.avif" alt="Mi Fotografía">
-            <figcaption>Mi Fotografía actual</figcaption>
-        </figure>
-
-     </header>
+      <figure class="hero-imagen">
+        <img src="img/perfil.avif" alt="Mi Fotografía" />
+        <figcaption>Mi Fotografía actual</figcaption>
+      </figure>
+    </header>
 
     <!-- Seccion 2: Navegacion - MIRIAN | clase: navegacion | Flexbox -->
-     <!--Menú-->
-     <nav>
-        <ul class="menu">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#quien-soy">Quién Soy</a></li>
-            <li><a href="#intereses">Intereses</a></li>
-            <li><a href="#metas">Metas</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-            <li><a href="#multimedia">Audio</a></li>
-            <li><a href="#video">Video</a></li>
-        </ul>
-     </nav>
+    <!--Menú-->
+    <nav>
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#quien-soy">Quién Soy</a></li>
+        <li><a href="#intereses">Intereses</a></li>
+        <li><a href="#metas">Metas</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#galeria">Galeria</a></li>
+        <li><a href="#multimedia">Audio</a></li>
+        <li><a href="#video">Video</a></li>
+      </ul>
+    </nav>
     <main>
-
-        <!-- Seccion 3: Quien soy - MIRIAN | id="quien-soy" | clase: seccion--quien-soy | Flexbox -->
-     <section id="quien-soy" class="seccion-quien-soy">
+      <!-- Seccion 3: Quien soy - MIRIAN | id="quien-soy" | clase: seccion--quien-soy | Flexbox -->
+      <section id="quien-soy" class="seccion-quien-soy">
         <article>
-            <h2>¿Quién soy?</h2>
+          <h2>¿Quién soy?</h2>
+          <p>
+            Soy estudiante del bootcam Nómada, me apasiona la ternpñpgía, el
+            desarrollo web y el aprendizaje constante. Me encanta crear
+            proyectos que sean un reto para mi e involucren creatividad con
+            programación y espero que esta capsula del tiempo me recuerde todo
+            lo que sueño.
+          </p>
+        </article>
+      </section>
+      <!-- Seccion 4: Mis intereses (min. 6 tarjetas) - JAVIER | id="intereses" | clase: seccion--intereses, intereses__grid | Flexbox -->
+      <section id="intereses" class="seccion--intereses">
+        <h2>Mis Intereses</h2>
+        <div class="intereses_grid">
+          <article class="tarjeta-interes">
+            <h3>Programación y Lógica</h3>
             <p>
-                Soy estudiante del bootcam Nómada, me apasiona la ternpñpgía,
-                el desarrollo web y el aprendizaje constante. Me encanta crear
-                proyectos que sean un reto para mi e involucren creatividad
-                con programación y espero que esta capsula del tiempo me recuerde
-                todo lo que sueño.
+              Me interesan los retos algorítmicos usando C++ y C#, explorando
+              arquitecturas de software y estructuras de datos.
             </p>
+          </article>
+          <article class="tarjeta-interes">
+            <h3>Emprendimiento</h3>
+            <p>
+              Me interesa la gestión y diseño de campañas para proyectos
+              independientes como mi centro terapia infantil y consultoría
+              académica.
+            </p>
+          </article>
+          <article class="tarjeta-interes">
+            <h3>Fútbol Nocturno</h3>
+            <p>
+              Me encanta el fútbol nocturno, que es fundamental en mi rutina
+              para mantener la energía, despejar la mente y competir sanamente.
+            </p>
+          </article>
+          <article class="tarjeta-interes">
+            <h3>Suplementos para la concentración</h3>
+            <p>
+              Uso de suplementos como la Melena de León y rutinas de
+              alimentación natural para combatir mi TDAH.
+            </p>
+          </article>
+          <article class="tarjeta-interes">
+            <h3>Lectura y Desarrollo Personal</h3>
+            <p>
+              Leo libros enfocados en la creatividad y el crecimiento personal,
+              aprovechándolos también para mejorar mi vocabulario en inglés.
+            </p>
+          </article>
+          <article class="tarjeta-interes">
+            <h3>Optimización Matemática</h3>
+            <p>
+              Estudio de modelos de optimización lineal y metodologías aplicadas
+              a la resolución de problemas en ingeniería.
+            </p>
+          </article>
+        </div>
+      </section>
 
+      <!-- Seccion 5: Tabla Mis metas (min. 8 registros) - JAVIER | id="metas" | clase: seccion--metas -->
+
+      <section id="metas" class="seccion--metas">
+        <h2>Mis Metas a Futuro</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Meta</th>
+              <th>Categoría</th>
+              <th>Plazo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Finalizar con éxito la carrera de Ingeniería de Sistemas</td>
+              <td>Académico</td>
+              <td>Largo Plazo</td>
+            </tr>
+            <tr>
+              <td>Consolidar y expandir los servicios de Guía Académica</td>
+              <td>Negocios</td>
+              <td>Mediano Plazo</td>
+            </tr>
+            <tr>
+              <td>Hacer crecer el centro de terapia Manitos Unidas</td>
+              <td>Negocios</td>
+              <td>Mediano Plazo</td>
+            </tr>
+            <tr>
+              <td>Dominar la Programación Orientada a Objetos en C++ y C#</td>
+              <td>Técnico</td>
+              <td>Corto Plazo</td>
+            </tr>
+            <tr>
+              <td>
+                Dedicarme al 100% a la programación y desarrollo de software
+                profesionalmente.
+              </td>
+              <td>Profesional</td>
+              <td>Mediano Plazo</td>
+            </tr>
+            <tr>
+              <td>Mejorar la fluidez y pronunciación en el idioma inglés</td>
+              <td>Desarrollo Personal</td>
+              <td>Continuo</td>
+            </tr>
+            <tr>
+              <td>
+                Completar nuevas certificaciones en plataformas de programación
+              </td>
+              <td>Académico</td>
+              <td>Corto Plazo</td>
+            </tr>
+            <tr>
+              <td>
+                Desarrollar proyectos propios integrando video y automatización
+              </td>
+              <td>Creativo / Técnico</td>
+              <td>Corto Plazo</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Seccion 6: Tarjetas de habilidades - ROUS MEDINA | id="habilidades" | clase: seccion--habilidades, habilidades__grid | Flexbox -->
+
+      <!-- Seccion 7: Galeria de 8 imagenes - ROUS MEDINA | id="galeria" | clase: seccion--galeria, galeria__grid | Grid -->
+
+      <!-- Seccion 8: Audio - WILMER GULCOCHIA | id="multimedia" | clase: seccion--multimedia -->
+      <section class="seccion seccion--multimedia" id="multimedia">
+        <h2 class="seccion__titulo">Multimedia</h2>
+        <article class="multimedia__audio">
+          <h3>Mis Canciónes Favoritas</h3>
+          <audio controls muted>
+            <source
+              src="audio/June Liu - Gerimis Senja.mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+          <p class="multimedia__descripcion">June Liu - Gerimis Senja</p>
+          <audio controls muted>
+            <source
+              src="audio/Rabito - Un Pacto Con Dios .mp3"
+              type="audio/mpeg"
+            />
+          </audio>
+          <p class="multimedia__descripcion">Rabito - Un Pacto Con Dios</p>
         </article>
 
-     </section>
-        <!-- Seccion 4: Mis intereses (min. 6 tarjetas) - JAVIER | id="intereses" | clase: seccion--intereses, intereses__grid | Flexbox -->
-
-        <!-- Seccion 5: Tabla Mis metas (min. 8 registros) - JAVIER | id="metas" | clase: seccion--metas -->
-
-        <!-- Seccion 6: Tarjetas de habilidades - ROUS MEDINA | id="habilidades" | clase: seccion--habilidades, habilidades__grid | Flexbox -->
-
-        <!-- Seccion 7: Galeria de 8 imagenes - ROUS MEDINA | id="galeria" | clase: seccion--galeria, galeria__grid | Grid -->
-
-        <!-- Seccion 8: Audio - WILMER GULCOCHIA | id="multimedia" | clase: seccion--multimedia -->
-        <section class="seccion seccion--multimedia" id="multimedia">
-            <h2 class="seccion__titulo">Multimedia</h2>
-            <article class="multimedia__audio">
-                <h3>Mis Canciónes Favoritas</h3>
-                <audio controls muted>
-                    <source src="audio/June Liu - Gerimis Senja.mp3" type="audio/mpeg">
-                </audio>
-                <p class="multimedia__descripcion">June Liu - Gerimis Senja</p>
-                <audio controls muted>
-                    <source src="audio/Rabito - Un Pacto Con Dios .mp3" type="audio/mpeg">
-                </audio>
-                <p class="multimedia__descripcion">Rabito - Un Pacto Con Dios </p>
-            </article>
-
         <!-- Seccion 9: Video - WILMER GULCOCHIA | dentro de la misma seccion multimedia -->
-            <article class="multimedia__video">
-                <h3>Mis Videos Favoritos</h3>
-                <video controls width="100%" poster="img/video-poster.webp">
-                    <source src="video/Unity (Acoustic) - Alan x Walkers - Sapphire.mp4" type="video/mp4">
-                    <figcaption>Unity (Acoustic) - Alan x Walkers - Sapphire</figcaption>
-                </video>
-                <p class="multimedia__descripcion">Unity (Acoustic) - Alan x Walkers - Sapphire</p>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/MUiwaZ9jdK8?si=N1j4Hqk9jikkiH85" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <p class="multimedia__descripcion">Keith Urban - Making Memories of Us - LIVE</p>
-            </article>
-        </section>
+        <article class="multimedia__video">
+          <h3>Mis Videos Favoritos</h3>
+          <video controls width="100%" poster="img/video-poster.webp">
+            <source
+              src="video/Unity (Acoustic) - Alan x Walkers - Sapphire.mp4"
+              type="video/mp4"
+            />
+            <figcaption>
+              Unity (Acoustic) - Alan x Walkers - Sapphire
+            </figcaption>
+          </video>
+          <p class="multimedia__descripcion">
+            Unity (Acoustic) - Alan x Walkers - Sapphire
+          </p>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/MUiwaZ9jdK8?si=N1j4Hqk9jikkiH85"
+            title="YouTube video player"
+            frameborder="0"
+            allow="
+              accelerometer;
+              autoplay;
+              clipboard-write;
+              encrypted-media;
+              gyroscope;
+              picture-in-picture;
+              web-share;
+            "
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p class="multimedia__descripcion">
+            Keith Urban - Making Memories of Us - LIVE
+          </p>
+        </article>
+      </section>
 
-        <!-- Seccion 10: Recursos favoritos (enlaces externos) - DANIEL | id="recursos" | clase: seccion--recursos, recursos__grid | Flexbox -->
+      <!-- Seccion 10: Recursos favoritos (enlaces externos) - DANIEL | id="recursos" | clase: seccion--recursos, recursos__grid | Flexbox -->
 
-        <!-- Seccion 11: Carta al yo del futuro - DANIEL | id="carta" | clase: seccion--carta -->
-
+      <!-- Seccion 11: Carta al yo del futuro - DANIEL | id="carta" | clase: seccion--carta -->
     </main>
 
     <!-- Seccion 12: Footer - DANIEL | id="contacto" | clase: footer | Flexbox -->
-
-</body>
+  </body>
 </html>
